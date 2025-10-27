@@ -1,8 +1,10 @@
 name: Run System Tests
 on:
+  schedule:
+    - cron: '0 6 */2 * *'
   push:
     branches:
-      - 'main'
+      - 'main.next'
 permissions:
   contents: read
 jobs:
